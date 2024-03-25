@@ -13,7 +13,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { CgSearch } from "react-icons/cg";
+import SearchField from "./SearchField";
 
 export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
@@ -85,17 +85,14 @@ export default function Header() {
           direction={"row"}
           spacing={5}
         >
-          <Icon
-            _hover={{
-              color: "#E50913",
-              cursor: "pointer",
-            }}
+          <SearchField />
+          <Text
+            display={{ base: "none", md: "inline-block" }}
+            _hover={{ color: "#E50913", cursor: "pointer" }}
             transition={"all 0.3s ease"}
-            fontSize={"2xl"}
           >
-            <CgSearch />
-          </Icon>
-          <Text display={{ base: "none", md: "inline-block" }}>Children</Text>
+            Children
+          </Text>
           <Icon
             _hover={{
               color: "#E50913",
