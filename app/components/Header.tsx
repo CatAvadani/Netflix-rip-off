@@ -104,13 +104,13 @@ export default function Header() {
           >
             <BellIcon />
           </Icon>
-          <Image
+          {/* <Image
             _hover={{ cursor: "pointer", transform: "scale(1.1)" }}
             transition={"all 0.3s ease"}
             borderRadius='5px'
             src='https://rb.gy/g1pwyx'
             alt='user-img'
-          />
+          /> */}
           <UserMenu />
         </Stack>
       </Flex>

@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/layout";
 import {
-  Icon,
+  Image,
   Menu,
   MenuButton,
   MenuDivider,
@@ -9,7 +9,6 @@ import {
   Portal,
   Text,
 } from "@chakra-ui/react";
-import { BiSolidChevronDown } from "react-icons/bi";
 import { FaRegUser } from "react-icons/fa";
 import { IoMdHelpCircleOutline } from "react-icons/io";
 import { TiPencil } from "react-icons/ti";
@@ -17,8 +16,12 @@ import { TiPencil } from "react-icons/ti";
 export default function UserMenu() {
   return (
     <Menu>
-      <MenuButton>
-        <Icon as={BiSolidChevronDown} boxSize={6} />
+      <MenuButton
+        width={"40px"}
+        _hover={{ cursor: "pointer", transform: "scale(1.1)" }}
+        transition={"all 0.3s ease"}
+      >
+        <Image borderRadius='5px' src='https://rb.gy/g1pwyx' alt='user-img' />
       </MenuButton>
       <Portal>
         <MenuList bg={"#363434"} color={"white"} border={"none"}>
