@@ -1,6 +1,10 @@
 import { Box } from "@chakra-ui/react";
-import Image from "next/image";
 
 export default function Home() {
-  return <Box color='red'>Netflix</Box>;
+  return (
+    // add the padding top to the Box component
+    <Box color='red' pt='5rem'>
+      {/* Netflix */}
+    </Box>
+  );
 }
