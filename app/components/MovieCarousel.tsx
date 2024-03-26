@@ -2,16 +2,18 @@
 
 import {
   Box,
+  Button,
   Container,
+  HStack,
   Heading,
   Stack,
-  Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import React from "react";
 // Here we have used react-icons package for the icons
 // And react-slick as our Carousel Lib
 import { movies } from "@/data/movies";
+import { InfoIcon, TriangleDownIcon } from "@chakra-ui/icons";
 import Slider from "react-slick";
 
 // Settings for the slider
@@ -74,7 +76,7 @@ export function MovieCarousel() {
                 w={"full"}
                 maxW={"lg"}
                 position="absolute"
-                top="50%"
+                top="70%"
                 transform="translate(0, -50%)"
               >
                 <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
@@ -82,9 +84,22 @@ export function MovieCarousel() {
                   {movie.title}
                   <hr color="white"></hr>
                 </Heading>
-                <Text fontSize={{ base: "md", lg: "lg" }} color="GrayText">
-                  {movie.synopsis}
-                </Text>
+                <HStack spacing={4}>
+                  <Button
+                    bg="white"
+                    color="black"
+                    borderRadius={4}
+                    leftIcon={<TriangleDownIcon />}
+                  >
+                    PLAY
+                  </Button>
+                  <Button
+                    bg="rgba(255, 255, 255, 0.5)"
+                    color="white"
+                    borderRadius={4}
+                    leftIcon={<InfoIcon />}
+                  ></Button>
+                </HStack>
               </Stack>
             </Container>
           </Box>
