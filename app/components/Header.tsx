@@ -14,6 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import SearchField from "./SearchField";
+import UserMenu from "./UserMenu";
 
 export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
@@ -103,7 +104,6 @@ export default function Header() {
           >
             <BellIcon />
           </Icon>
-
           <Image
             _hover={{ cursor: "pointer", transform: "scale(1.1)" }}
             transition={"all 0.3s ease"}
@@ -111,6 +111,7 @@ export default function Header() {
             src='https://rb.gy/g1pwyx'
             alt='user-img'
           />
+          <UserMenu />
         </Stack>
       </Flex>
 
