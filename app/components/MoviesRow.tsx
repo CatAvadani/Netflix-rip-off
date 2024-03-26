@@ -1,7 +1,7 @@
 "use client";
 import { movies } from "@/data/movies";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
-import { Box, Icon, Text } from "@chakra-ui/react";
+import { Box, Flex, Icon, Text } from "@chakra-ui/react";
 import MovieCard from "./MovieCard";
 
 interface MoviesRowProps {
@@ -10,7 +10,7 @@ interface MoviesRowProps {
 
 export default function MoviesRow({ title }: MoviesRowProps) {
   return (
-    <Box color={"#f1e6e6"} h={"20rem"} bg={"green"} p={5}>
+    <Box color={"#f1e6e6"} h={"20rem"} p={5} mt={3}>
       <Text
         cursor={"pointer"}
         fontWeight={"bold"}
@@ -38,16 +38,21 @@ export default function MoviesRow({ title }: MoviesRowProps) {
           _groupHover={{ opacity: "100" }}
           transition={"all 0.3s easy"}
         />
-
-        {movies.map((movie) => (
-          <MovieCard
-            key={movie.title}
-            imageSrc={movie.thumbnail}
-            title={movie.title}
-            description={movie.synopsis}
-          />
-        ))}
-
+        <Flex
+          alignItems={"center"}
+          gap={"0.3rem"}
+          overflowX={"scroll"}
+          scrollBehavior={"smooth"}
+        >
+          {movies.map((movie) => (
+            <MovieCard
+              key={movie.title}
+              imageSrc={movie.thumbnail}
+              title={movie.title}
+              description={movie.synopsis}
+            />
+          ))}
+        </Flex>
         <Icon
           as={ChevronRightIcon}
           fontSize={"3rem"}

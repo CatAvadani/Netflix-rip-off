@@ -6,7 +6,7 @@ export default function Home() {
     // add the padding top to the Box component
     <Box color='red' pt='5rem'>
       {/* Netflix */}
-      <MoviesRow title='Trending Movies' movies={[]} />
+      <MoviesRow title='Trending Now' />
     </Box>
   );
 }
