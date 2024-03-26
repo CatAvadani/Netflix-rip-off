@@ -15,12 +15,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body style={{ background: "black" }}>
         <Providers>
           <Header />
-          {/* {TODO: change the minH back to 100vh} */}
-          <Box minH="140vh" as="main">
+          <Box minH='100vh' as='main'>
             {children}{" "}
           </Box>
           <Footer />

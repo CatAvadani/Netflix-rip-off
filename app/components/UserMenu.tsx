@@ -24,7 +24,7 @@ export default function UserMenu() {
         <Image borderRadius='5px' src='https://rb.gy/g1pwyx' alt='user-img' />
       </MenuButton>
       <Portal>
-        <MenuList bg={"#363434"} color={"white"} border={"none"}>
+        <MenuList bg={"#363434"} color={"white"} border={"none"} zIndex={10}>
           <MenuItem bg={"#363434"}>
             <Box mr='1rem'>
               <FaRegUser />
