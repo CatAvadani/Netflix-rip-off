@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Circle, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Circle, Flex, Image, Text, Tooltip } from "@chakra-ui/react";
 import { BsHandThumbsUp } from "react-icons/bs";
 import { IoIosPlay } from "react-icons/io";
 import { LuChevronDown, LuPlus } from "react-icons/lu";
@@ -93,31 +93,58 @@ export default function MovieCard({ title, imageSrc, genre }: MovieProps) {
             >
               <IoIosPlay fontSize={"1.5rem"} />
             </Circle>
-            <Circle
-              size={"40px"}
-              border={" 1px solid white"}
-              color={"white"}
-              _hover={{ cursor: "pointer" }}
+            <Tooltip
+              hasArrow
+              label='Add to My List'
+              placement='top'
+              bg={"white"}
+              color={"black"}
+              p={2}
             >
-              <LuPlus fontSize={"1.5rem"} />
-            </Circle>
-            <Circle
-              size={"40px"}
-              border={" 1px solid white"}
-              color={"white"}
-              _hover={{ cursor: "pointer" }}
+              <Circle
+                size={"40px"}
+                border={" 1px solid white"}
+                color={"white"}
+                _hover={{ cursor: "pointer" }}
+              >
+                <LuPlus fontSize={"1.5rem"} />
+              </Circle>
+            </Tooltip>
+            <Tooltip
+              hasArrow
+              label='I Like This'
+              placement='top'
+              bg={"white"}
+              color={"black"}
+              p={2}
             >
-              <BsHandThumbsUp fontSize={"1.5rem"} />
-            </Circle>
+              <Circle
+                size={"40px"}
+                border={" 1px solid white"}
+                color={"white"}
+                _hover={{ cursor: "pointer" }}
+              >
+                <BsHandThumbsUp fontSize={"1.5rem"} />
+              </Circle>
+            </Tooltip>
           </Flex>
-          <Circle
-            size={"40px"}
-            border={" 1px solid white"}
-            color={"white"}
-            _hover={{ cursor: "pointer" }}
+          <Tooltip
+            hasArrow
+            label='More Info'
+            placement='top'
+            bg={"white"}
+            color={"black"}
+            p={2}
           >
-            <LuChevronDown fontSize={"1.5rem"} />
-          </Circle>
+            <Circle
+              size={"40px"}
+              border={" 1px solid white"}
+              color={"white"}
+              _hover={{ cursor: "pointer" }}
+            >
+              <LuChevronDown fontSize={"1.5rem"} />
+            </Circle>
+          </Tooltip>
         </Flex>
         <Text
           border={"1px solid white"}
