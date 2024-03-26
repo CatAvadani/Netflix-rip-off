@@ -1,0 +1,69 @@
+"use client";
+import { movies } from "@/data/movies";
+import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import { Box, Flex, Icon, Text } from "@chakra-ui/react";
+import MovieCard from "./MovieCard";
+
+interface MoviesRowProps {
+  title: string;
+}
+
+export default function MoviesRow({ title }: MoviesRowProps) {
+  return (
+    <Box color={"#f1e6e6"} h={"20rem"} p={5} mt={3}>
+      <Text
+        cursor={"pointer"}
+        fontWeight={"bold"}
+        transition={"all 0.3s easy"}
+        _hover={{ color: "white" }}
+      >
+        {title}
+      </Text>
+      <Box
+        display={"flex"}
+        flexWrap={"wrap"}
+        _groupActive={{}}
+        pos={"relative"}
+        ml={"-1"}
+      >
+        <Icon
+          as={ChevronLeftIcon}
+          fontSize={"3rem"}
+          p={"1"}
+          bg={"rgba(255,255, 255, 0.3)"}
+          borderRadius={"50%"}
+          cursor={"pointer"}
+          opacity={"0"}
+          _hover={{ transform: "scale(1.1)" }}
+          _groupHover={{ opacity: "100" }}
+          transition={"all 0.3s easy"}
+        />
+        <Flex
+          alignItems={"center"}
+          gap={"0.3rem"}
+          overflowX={"scroll"}
+          scrollBehavior={"smooth"}
+        >
+          {movies.map((movie) => (
+            <MovieCard
+              key={movie.title}
+              imageSrc={movie.thumbnail}
+              title={movie.title}
+              description={movie.synopsis}
+            />
+          ))}
+        </Flex>
+        <Icon
+          as={ChevronRightIcon}
+          fontSize={"3rem"}
+          p={"1"}
+          bg={"rgba(255,255, 255, 0.3)"}
+          borderRadius={"50%"}
+          cursor={"pointer"}
+          opacity={"0"}
+          transition={"all 0.3s easy"}
+        />
+      </Box>
+    </Box>
+  );
+}
