@@ -90,4 +90,15 @@ export const recommendedMovies: Movie[] = [
     thumbnail:
       "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
   },
+  {
+    title: "Schindler's List",
+    year: 1993,
+    rating: "R",
+    actors: ["Liam Neeson", "Ralph Fiennes", "Ben Kingsley"],
+    genre: "Biography, Drama, History",
+    synopsis:
+      "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+    thumbnail:
+      "https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
+  },
 ];
