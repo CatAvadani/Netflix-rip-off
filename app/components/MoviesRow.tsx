@@ -83,7 +83,7 @@ export default function MoviesRow({ title, filteredMovies }: MoviesRowProps) {
         >
           {filteredMovies.map((movie) => (
             <MovieCard
-              key={movie.title}
+              key={movie.title + Number(Math.random()) * 1000}
               imageSrc={movie.thumbnail}
               title={movie.title}
               description={movie.synopsis}
