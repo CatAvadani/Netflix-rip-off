@@ -8,15 +8,23 @@ export default function Home() {
   const adventureMovies = movies.filter((movie) =>
     movie.genre.includes("Adventure")
   );
-  const dramaMovies = movies.filter((movie) => movie.genre.includes("Drama"));
+  const thrillerMovies = movies.filter((movie) =>
+    movie.genre.includes("Thriller")
+  );
+  const recommendedByUs = recommendedMovies.filter(
+    (movie) =>
+      !movie.genre.includes("Thriller") &&
+      !movie.genre.includes("Adventure") &&
+      !movie.isTrending
+  );
 
   return (
     // add the padding top to the Box component
-    <Box color="red" pt="5rem" pb="5rem">
-      <MoviesRow title="Trending Now" filteredMovies={trendingMovies} />
-      <MoviesRow title="Recommended" filteredMovies={recommendedMovies} />
-      <MoviesRow title="Adventure" filteredMovies={adventureMovies} />
-      <MoviesRow title="Drama" filteredMovies={dramaMovies} />
+    <Box color='red' pt='5rem' pb='5rem'>
+      <MoviesRow title='Trending Now' filteredMovies={trendingMovies} />
+      <MoviesRow title='Recommended' filteredMovies={recommendedByUs} />
+      <MoviesRow title='Adventure' filteredMovies={adventureMovies} />
+      <MoviesRow title='Thriller' filteredMovies={thrillerMovies} />
     </Box>
   );
 }
