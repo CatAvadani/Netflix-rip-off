@@ -39,6 +39,28 @@ export function MovieCarousel() {
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "40px" });
 
+  function spliteTitle(title: string) {
+    const words = title.split(" ");
+    const midIndex = Math.ceil(words.length / 2);
+
+    let firstHalf = " ";
+    let secondHalf = " ";
+
+    for (let i = 0; i < words.length; i++) {
+      if (i < midIndex) {
+        firstHalf += words[i] + " ";
+      } else {
+        secondHalf += words[i] + " ";
+      }
+    }
+    return (
+      <>
+        <span style={{ color: "white" }}>{firstHalf}</span>
+        <span style={{ color: "yellow" }}>{secondHalf}</span>
+      </>
+    );
+  }
+
   return (
     <Box
       position={"relative"}
@@ -70,7 +92,12 @@ export function MovieCarousel() {
             backgroundImage={movie.thumbnail}
           >
             {/* This is the block you need to change, to customize the caption */}
-            <Container size="container.lg" height="600px" position="relative">
+            <Container
+              size="container.lg"
+              height="600px"
+              position="relative"
+              left={{ base: "0", md: "-20%" }}
+            >
               <Stack
                 spacing={6}
                 w={"full"}
@@ -80,9 +107,9 @@ export function MovieCarousel() {
                 transform="translate(0, -50%)"
               >
                 <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
-                  <hr color="white"></hr>
-                  {movie.title}
-                  <hr color="white"></hr>
+                  <hr color="white" style={{ width: "100%", height: 4 }}></hr>
+                  {spliteTitle(movie.title)}
+                  <hr color="white" style={{ width: "100%", height: 4 }}></hr>
                 </Heading>
                 <HStack spacing={4}>
                   <Button
@@ -98,7 +125,9 @@ export function MovieCarousel() {
                     color="white"
                     borderRadius={4}
                     leftIcon={<InfoIcon />}
-                  ></Button>
+                  >
+                    More Info
+                  </Button>
                 </HStack>
               </Stack>
             </Container>

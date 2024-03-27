@@ -1,6 +1,7 @@
 "use client";
 import { MovieCarousel } from "./components/MovieCarousel";
 import MoviesRow from "./components/MoviesRow";
+import { Box } from "@chakra-ui/react";
 
 export default function Home() {
   return (
