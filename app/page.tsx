@@ -1,6 +1,5 @@
 import { movies } from "@/data/movies";
 import { recommendedMovies } from "@/data/recommendedMovies";
-import { Box } from "@chakra-ui/react";
 import MoviesRow from "./components/MoviesRow";
 import { Box } from "@chakra-ui/react";
 import { MovieCarousel } from "./components/MovieCarousel";
