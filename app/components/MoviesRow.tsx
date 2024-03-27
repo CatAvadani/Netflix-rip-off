@@ -41,7 +41,7 @@ export default function MoviesRow({ title, filteredMovies }: MoviesRowProps) {
       mr={4}
       onMouseEnter={() => setShowChevrons(true)}
       onMouseLeave={() => setShowChevrons(false)}
-      role="group"
+      role='group'
     >
       <Text
         cursor={"pointer"}
@@ -75,10 +75,11 @@ export default function MoviesRow({ title, filteredMovies }: MoviesRowProps) {
           alignItems={"center"}
           gap={"0.3rem"}
           overflowX={"scroll"}
-          overflow={"hidden"}
+          overflow={"visible"}
           scrollBehavior={"smooth"}
-          h={"25rem"}
+          h={"14rem"}
           m={"0"}
+          pos={"relative"}
         >
           {filteredMovies.map((movie) => (
             <MovieCard
