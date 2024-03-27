@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body style={{ background: "black" }}>
+      <body style={{ background: "#141414" }}>
         <Providers>
           <Header />
           <Box minH='100vh' as='main'>

@@ -12,7 +12,7 @@ export default function SearchField() {
       <Input
         display={show ? "block" : "none"}
         placeholder='Search movies'
-        bg='black'
+        bg='rgba(0,0,0,0.5)'
         color='white'
         width={"300px"}
         _placeholder={{ color: "rgba(255,255,255,0.6)" }}

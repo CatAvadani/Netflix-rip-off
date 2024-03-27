@@ -35,20 +35,21 @@ export default function MoviesRow({ title, filteredMovies }: MoviesRowProps) {
   return (
     <Box
       p={2}
-      mt={3}
-      color={"#b7b3b3"}
-      ml={4}
-      mr={4}
+      mt={"-5rem"}
+      color={"white"}
+      pl={8}
       onMouseEnter={() => setShowChevrons(true)}
       onMouseLeave={() => setShowChevrons(false)}
       role='group'
     >
       <Text
+        maxW={"10rem"}
+        pos={"relative"}
+        mb={"-4.5rem"}
         cursor={"pointer"}
         fontWeight={"bold"}
-        fontSize={{ base: "1.2rem", md: "1.5rem" }}
+        fontSize={{ base: "1rem", md: "1.4rem" }}
         transition={"all 0.3s easy"}
-        _hover={{ color: "white" }}
       >
         {title}
       </Text>
