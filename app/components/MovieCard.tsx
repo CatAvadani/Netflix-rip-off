@@ -17,18 +17,20 @@ export default function MovieCard({ title, imageSrc, genre }: MovieProps) {
     <Box
       pos={"relative"}
       minW={"300px"}
-      h={220}
+      h={200}
       overflow={"hidden"}
       borderRadius={"5px"}
       transition='all 0.3s ease'
       _hover={{
-        h: "350",
+        h: "310px",
+        w: "320px",
         p: "0",
-        transform: "scale(1.1)",
-        zIndex: "10",
       }}
       sx={{
         "&:hover": {
+          transform: "scale(1.1)",
+          zIndex: "10",
+          position: "relative",
           ".cardBottom": {
             display: "block",
             height: "100%",
@@ -78,7 +80,7 @@ export default function MovieCard({ title, imageSrc, genre }: MovieProps) {
       />
       <Flex
         flexDir={"column"}
-        bg={"#141414"}
+        bg={"#212121"}
         className='cardBottom'
         display={"none"}
         p={2}
@@ -151,11 +153,11 @@ export default function MovieCard({ title, imageSrc, genre }: MovieProps) {
           color={"white"}
           maxW={"3rem"}
           textAlign={"center"}
-          mt={7}
+          mt={4}
         >
           16+
         </Text>
-        <Text mt={7} color={"white"}>
+        <Text mt={4} color={"white"}>
           {genre}
         </Text>
       </Flex>
