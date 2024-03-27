@@ -75,9 +75,9 @@ export default function MoviesRow({ title, filteredMovies }: MoviesRowProps) {
           alignItems={"center"}
           gap={"0.3rem"}
           overflowX={"scroll"}
-          overflow={"visible"}
+          overflow={"hidden"}
           scrollBehavior={"smooth"}
-          h={"14rem"}
+          h={"22rem"}
           m={"0"}
           pos={"relative"}
         >
