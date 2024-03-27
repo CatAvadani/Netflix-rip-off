@@ -45,7 +45,7 @@ export default function Header() {
         left={0}
         width={"100%"}
         zIndex={100}
-        color='white'
+        color={"#b7b3b3"}
         minH={"70px"}
         py={{ base: 2 }}
         px={{ base: 4, md: 10 }}
@@ -89,14 +89,14 @@ export default function Header() {
           <SearchField />
           <Text
             display={{ base: "none", md: "inline-block" }}
-            _hover={{ color: "#E50913", cursor: "pointer" }}
+            _hover={{ color: "white", cursor: "pointer" }}
             transition={"all 0.3s ease"}
           >
             Children
           </Text>
           <Icon
             _hover={{
-              color: "#E50913",
+              color: "white",
               cursor: "pointer",
             }}
             transition={"all 0.3s ease"}
@@ -104,13 +104,6 @@ export default function Header() {
           >
             <BellIcon />
           </Icon>
-          {/* <Image
-            _hover={{ cursor: "pointer", transform: "scale(1.1)" }}
-            transition={"all 0.3s ease"}
-            borderRadius='5px'
-            src='https://rb.gy/g1pwyx'
-            alt='user-img'
-          /> */}
           <UserMenu />
         </Stack>
       </Flex>
@@ -128,9 +121,9 @@ const DesktopNav = () => {
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Text
-            color={"white"}
+            color={"#b7b3b3"}
             fontWeight={400}
-            _hover={{ color: "#E50913", cursor: "pointer" }}
+            _hover={{ color: "white", cursor: "pointer" }}
             transition={"all 0.3s ease"}
           >
             {navItem.label}
