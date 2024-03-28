@@ -1,11 +1,14 @@
 "use client";
 
+import { movies } from "@/data/movies";
+import { Link } from "@chakra-ui/next-js";
 import { Box, Circle, Flex, Image, Text, Tooltip } from "@chakra-ui/react";
 import { BsHandThumbsUp } from "react-icons/bs";
 import { IoIosPlay } from "react-icons/io";
 import { LuChevronDown, LuPlus } from "react-icons/lu";
 
 interface MovieProps {
+  id: string;
   title: string;
   imageSrc: string;
   description: string;
@@ -14,6 +17,7 @@ interface MovieProps {
 }
 
 export default function MovieCard({
+  id,
   title,
   imageSrc,
   genre,
@@ -26,7 +30,7 @@ export default function MovieCard({
       h={isExpanded ? "310px" : "200px"}
       overflow={"hidden"}
       borderRadius={"5px"}
-      transition='all 0.3s ease'
+      transition="all 0.3s ease"
       _hover={{
         h: "310px",
         w: ' base: "250px", md: " 320px"',
@@ -51,24 +55,24 @@ export default function MovieCard({
         },
       }}
     >
-      <Box pos={"relative"} h={"250px"} className='movieImage'>
+      <Box pos={"relative"} h={"250px"} className="movieImage">
         <Image
-          className='image'
+          className="image"
           src={imageSrc}
           h={"100%"}
           w={"100%"}
           alt={`image-${title}`}
           borderRadius={"5px"}
-          objectFit='cover'
+          objectFit="cover"
         />
         <Box
-          pos='absolute'
-          top='0'
-          left='0'
-          h='100%'
-          w='100%'
-          bg='rgba(0, 0, 0, 0.3)'
-          borderRadius='5px'
+          pos="absolute"
+          top="0"
+          left="0"
+          h="100%"
+          w="100%"
+          bg="rgba(0, 0, 0, 0.3)"
+          borderRadius="5px"
         ></Box>
 
         <Text
@@ -86,8 +90,8 @@ export default function MovieCard({
 
       <Image
         pos={"absolute"}
-        src='/n-letter.svg'
-        alt='n-letter'
+        src="/n-letter.svg"
+        alt="n-letter"
         width={50}
         zIndex={2}
         top={"5%"}
@@ -96,7 +100,7 @@ export default function MovieCard({
       <Flex
         flexDir={"column"}
         bg={"#212121"}
-        className='cardBottom'
+        className="cardBottom"
         display={"none"}
         p={2}
       >
@@ -110,10 +114,11 @@ export default function MovieCard({
             >
               <IoIosPlay fontSize={"1.5rem"} />
             </Circle>
+
             <Tooltip
               hasArrow
-              label='Add to My List'
-              placement='top'
+              label="Add to My List"
+              placement="top"
               bg={"white"}
               color={"black"}
               p={2}
@@ -129,8 +134,8 @@ export default function MovieCard({
             </Tooltip>
             <Tooltip
               hasArrow
-              label='I Like This'
-              placement='top'
+              label="I Like This"
+              placement="top"
               bg={"white"}
               color={"black"}
               p={2}
@@ -145,23 +150,25 @@ export default function MovieCard({
               </Circle>
             </Tooltip>
           </Flex>
-          <Tooltip
-            hasArrow
-            label='More Info'
-            placement='top'
-            bg={"white"}
-            color={"black"}
-            p={2}
-          >
-            <Circle
-              size={"40px"}
-              border={" 1px solid white"}
-              color={"white"}
-              _hover={{ cursor: "pointer" }}
+          <Link href={`/movie/${id}`}>
+            <Tooltip
+              hasArrow
+              label="More Info"
+              placement="top"
+              bg={"white"}
+              color={"black"}
+              p={2}
             >
-              <LuChevronDown fontSize={"1.5rem"} />
-            </Circle>
-          </Tooltip>
+              <Circle
+                size={"40px"}
+                border={" 1px solid white"}
+                color={"white"}
+                _hover={{ cursor: "pointer" }}
+              >
+                <LuChevronDown fontSize={"1.5rem"} />
+              </Circle>
+            </Tooltip>
+          </Link>
         </Flex>
         <Text
           border={"1px solid white"}
