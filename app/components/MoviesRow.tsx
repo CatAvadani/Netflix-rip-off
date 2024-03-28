@@ -35,7 +35,7 @@ export default function MoviesRow({ title, filteredMovies }: MoviesRowProps) {
   return (
     <Box
       p={2}
-      mt={"-5rem"}
+      mt={"-4rem"}
       color={"white"}
       pl={8}
       onMouseEnter={() => setShowChevrons(true)}
