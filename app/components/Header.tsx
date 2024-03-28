@@ -102,6 +102,7 @@ export default function Header() {
             Children
           </Text>
           <Icon
+            display={{ base: "none", md: "inline-block" }}
             _hover={{
               color: "#b7b3b3",
               cursor: "pointer",
