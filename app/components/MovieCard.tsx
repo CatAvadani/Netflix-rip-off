@@ -5,7 +5,8 @@ import { Link } from "@chakra-ui/next-js";
 import { Box, Circle, Flex, Image, Text, Tooltip } from "@chakra-ui/react";
 import { BsHandThumbsUp } from "react-icons/bs";
 import { IoIosPlay } from "react-icons/io";
-import { LuChevronDown, LuPlus } from "react-icons/lu";
+import { LuCheck, LuChevronDown, LuPlus } from "react-icons/lu";
+import { useList } from "../context/MyListContext";
 
 interface MovieProps {
   id: string;
@@ -14,6 +15,8 @@ interface MovieProps {
   description: string;
   genre: string;
   isExpanded?: boolean;
+  isInMyList?: boolean;
+  onToggle: () => void;
 }
 
 export default function MovieCard({
@@ -22,6 +25,8 @@ export default function MovieCard({
   imageSrc,
   genre,
   isExpanded = false,
+  isInMyList = false,
+  onToggle,
 }: MovieProps) {
   return (
     <Box
@@ -128,8 +133,17 @@ export default function MovieCard({
                 border={" 1px solid white"}
                 color={"white"}
                 _hover={{ cursor: "pointer" }}
+                onClick={onToggle}
               >
-                <LuPlus fontSize={"1.5rem"} />
+                {" "}
+                {isInMyList ? (
+                  <LuCheck
+                    className="h-6 w-6 text-red-700"
+                    onClick={onToggle}
+                  />
+                ) : (
+                  <LuPlus className="h-6 w-6" onClick={onToggle} />
+                )}
               </Circle>
             </Tooltip>
             <Tooltip

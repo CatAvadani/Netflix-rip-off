@@ -3,6 +3,7 @@ import { Movie } from "@/data/movies";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { Box, Flex, Icon, Text } from "@chakra-ui/react";
 import { useRef, useState } from "react";
+import { useList } from "../context/MyListContext";
 import MovieCard from "./MovieCard";
 
 interface MoviesRowProps {
@@ -14,6 +15,7 @@ export default function MoviesRow({ title, filteredMovies }: MoviesRowProps) {
   const [showChevrons, setShowChevrons] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const rowRef = useRef<HTMLDivElement>(null);
+  const { myList, toggleMyList } = useList();
 
   const handleClick = (direction: string) => {
     setIsScrolled(true);
@@ -40,7 +42,7 @@ export default function MoviesRow({ title, filteredMovies }: MoviesRowProps) {
       pl={8}
       onMouseEnter={() => setShowChevrons(true)}
       onMouseLeave={() => setShowChevrons(false)}
-      role='group'
+      role="group"
     >
       <Text
         maxW={"10rem"}
@@ -90,6 +92,8 @@ export default function MoviesRow({ title, filteredMovies }: MoviesRowProps) {
               title={movie.title}
               description={movie.synopsis}
               genre={movie.genre}
+              isInMyList={myList?.some((m) => m === movie.id)}
+              onToggle={() => toggleMyList(movie.id)}
             />
           ))}
         </Flex>

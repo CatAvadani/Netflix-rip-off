@@ -3,11 +3,14 @@
 
 import { ChakraProvider } from "@chakra-ui/react";
 import SearchMovieProvider from "./context/SearchMovieContext";
+import MyListProvider from "./context/MyListContext";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ChakraProvider>
-      <SearchMovieProvider>{children}</SearchMovieProvider>
+      <MyListProvider>
+        <SearchMovieProvider>{children}</SearchMovieProvider>
+      </MyListProvider>
     </ChakraProvider>
   );
 }
