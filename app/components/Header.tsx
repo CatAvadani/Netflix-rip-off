@@ -8,6 +8,7 @@ import {
   Icon,
   IconButton,
   Image,
+  Link,
   Stack,
   Text,
   useDisclosure,
@@ -39,13 +40,17 @@ export default function Header() {
   return (
     <Box>
       <Flex
-        bg={isScrolled ? "#141414" : "transparent"}
+        bg={
+          isScrolled
+            ? "#141414"
+            : "linear-gradient(to bottom, black, rgba(0, 0, 0, 0.7) 48%, rgba(0, 0, 0, 0))"
+        }
         position={{ base: "relative", md: "fixed" }}
         top={0}
         left={0}
         width={"100%"}
         zIndex={100}
-        color={"#b7b3b3"}
+        color={"white"}
         minH={"70px"}
         py={{ base: 2 }}
         px={{ base: 4, md: 10 }}
@@ -72,7 +77,9 @@ export default function Header() {
           justify={{ base: "center", md: "start" }}
           alignItems={"center"}
         >
-          <Image src='/logo1.svg' alt='logo' width='180px' />
+          <Link href='/'>
+            <Image src='/logo1.svg' alt='logo' width='180px' />
+          </Link>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
@@ -89,14 +96,14 @@ export default function Header() {
           <SearchField />
           <Text
             display={{ base: "none", md: "inline-block" }}
-            _hover={{ color: "white", cursor: "pointer" }}
+            _hover={{ color: "#b7b3b3", cursor: "pointer" }}
             transition={"all 0.3s ease"}
           >
             Children
           </Text>
           <Icon
             _hover={{
-              color: "white",
+              color: "#b7b3b3",
               cursor: "pointer",
             }}
             transition={"all 0.3s ease"}
@@ -121,9 +128,9 @@ const DesktopNav = () => {
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Text
-            color={"#b7b3b3"}
+            color={"white"}
             fontWeight={400}
-            _hover={{ color: "white", cursor: "pointer" }}
+            _hover={{ color: "#b7b3b3", cursor: "pointer" }}
             transition={"all 0.3s ease"}
           >
             {navItem.label}

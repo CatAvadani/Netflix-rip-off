@@ -10,20 +10,27 @@ interface MovieProps {
   imageSrc: string;
   description: string;
   genre: string;
+  isExpanded?: boolean;
 }
 
-export default function MovieCard({ title, imageSrc, genre }: MovieProps) {
+export default function MovieCard({
+  title,
+  imageSrc,
+  genre,
+  isExpanded = false,
+}: MovieProps) {
   return (
     <Box
       pos={"relative"}
       minW={"300px"}
-      h={200}
+      h={isExpanded ? "310px" : "200px"}
       overflow={"hidden"}
       borderRadius={"5px"}
       transition='all 0.3s ease'
       _hover={{
         h: "310px",
-        w: "320px",
+        w: ' base: "250px", md: " 320px"',
+
         p: "0",
       }}
       sx={{
