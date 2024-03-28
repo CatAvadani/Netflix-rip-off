@@ -127,7 +127,7 @@ export default function MovieCard({
 
             <Tooltip
               hasArrow
-              label='Add to My List'
+              label={isInMyList ? "Remove from My List" : "Add to My List"}
               placement='top'
               bg={"white"}
               color={"black"}
