@@ -16,21 +16,17 @@ export default function SearchMovies() {
   return (
     <Box color={"white"} mt={"10rem"}>
       <SimpleGrid
-        width="80%"
-        m="2rem auto"
+        width='80%'
+        m='2rem auto'
         alignContent={"center"}
-        mt="5rem"
+        mt='5rem'
         columns={{ base: 1, md: 2, lg: 3 }}
         gap={10}
       >
         {searchedMovies.map((movie) => (
           <MovieCard
             key={movie.id}
-            id={movie.id}
-            title={movie.title}
-            imageSrc={movie.thumbnail}
-            genre={movie.genre}
-            description=""
+            movie={movie}
             isExpanded={true}
             isInMyList={myList.some((m) => m === movie.id)}
             onToggle={() => toggleMyList(movie.id)}

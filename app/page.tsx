@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <div>
       <MovieCarousel />
-      <Box mt='5rem' pb='5rem'>
+      <Box mt='-1rem' pb='5rem'>
         <MoviesRow title='Trending Now' filteredMovies={trendingMovies} />
         <MoviesRow title='Recommended' filteredMovies={recommendedByUs} />
         <MoviesRow title='Adventure' filteredMovies={adventureMovies} />
