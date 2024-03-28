@@ -1,4 +1,5 @@
 export interface Movie {
+  id: string;
   title: string;
   year: number;
   rating: string;
@@ -11,6 +12,7 @@ export interface Movie {
 
 export const movies: Movie[] = [
   {
+    id: "1",
     title: "The Shawshank Redemption",
     year: 1994,
     rating: "R",
@@ -22,6 +24,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_QL75_UX380_CR0,4,380,562_.jpg",
   },
   {
+    id: "2",
     title: "The Godfather",
     year: 1972,
     rating: "R",
@@ -33,6 +36,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_QL75_UX380_CR0,4,380,562_.jpg",
   },
   {
+    id: "3",
     title: "The Godfather: Part II",
     year: 1974,
     rating: "R",
@@ -45,6 +49,7 @@ export const movies: Movie[] = [
     isTrending: true,
   },
   {
+    id: "4",
     title: "The Dark Knight",
     year: 2008,
     rating: "PG-13",
@@ -56,6 +61,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
   },
   {
+    id: "5",
     title: "12 Angry Men",
     year: 1957,
     rating: "Not Rated",
@@ -67,6 +73,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
   },
   {
+    id: "6",
     title: "Schindler's List",
     year: 1993,
     rating: "R",
@@ -78,6 +85,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
   },
   {
+    id: "7",
     title: "The Lord of the Rings: The Return of the King",
     year: 2003,
     rating: "PG-13",
@@ -90,6 +98,7 @@ export const movies: Movie[] = [
     isTrending: true,
   },
   {
+    id: "8",
     title: "Pulp Fiction",
     year: 1994,
     rating: "R",
@@ -101,6 +110,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
   },
   {
+    id: "9",
     title: "The Good, the Bad and the Ugly",
     year: 1966,
     rating: "Not Rated",
@@ -112,6 +122,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BOTQ5NDI3MTI4MF5BMl5BanBnXkFtZTgwNDQ4ODE5MDE@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
   },
   {
+    id: "10",
     title: "Fight Club",
     year: 1999,
     rating: "R",
@@ -124,6 +135,7 @@ export const movies: Movie[] = [
     isTrending: true,
   },
   {
+    id: "11",
     title: "Forrest Gump",
     year: 1994,
     rating: "PG-13",
@@ -135,6 +147,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
   },
   {
+    id: "12",
     title: "Inception",
     year: 2010,
     rating: "PG-13",
@@ -146,6 +159,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
   },
   {
+    id: "13",
     title: "The Lord of the Rings: The Fellowship of the Ring",
     year: 2001,
     rating: "PG-13",
@@ -157,6 +171,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
   },
   {
+    id: "14",
     title: "Star Wars: Episode V - The Empire Strikes Back",
     year: 1980,
     rating: "PG",
@@ -169,6 +184,7 @@ export const movies: Movie[] = [
     isTrending: true,
   },
   {
+    id: "15",
     title: "The Matrix",
     year: 1999,
     rating: "R",
@@ -180,6 +196,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
   },
   {
+    id: "16",
     title: "Goodfellas",
     year: 1990,
     rating: "R",
@@ -191,6 +208,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
   },
   {
+    id: "17",
     title: "One Flew Over the Cuckoo's Nest",
     year: 1975,
     rating: "R",
@@ -202,6 +220,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BZjA0OWVhOTAtYWQxNi00YzNhLWI4ZjYtNjFjZTEyYjJlNDVlL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
   },
   {
+    id: "18",
     title: "Seven Samurai",
     year: 1954,
     rating: "Not Rated",
@@ -213,6 +232,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BMTAzY2Q4OGUtMzg4Ni00YTBlLThkMDgtMTVlMjY0ZGRlMzdjXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_FMjpg_UX1000_.jpg",
   },
   {
+    id: "19",
     title: "The Silence of the Lambs",
     year: 1991,
     rating: "R",
@@ -224,6 +244,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
   },
   {
+    id: "20",
     title: "Casablanca",
     year: 1942,
     rating: "PG",
@@ -236,6 +257,7 @@ export const movies: Movie[] = [
     isTrending: true,
   },
   {
+    id: "21",
     title: "The Lord of the Rings: The Two Towers",
     year: 2002,
     rating: "PG-13",
@@ -247,6 +269,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BZGMxZTdjZmYtMmE2Ni00ZTdkLWI5NTgtNjlmMjBiNzU2MmI5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_QL75_UX380_CR0,14,380,562_.jpg",
   },
   {
+    id: "22",
     title: "Indiana Jones and the Raiders of the Lost Ark",
     year: 1981,
     rating: "PG",
@@ -258,6 +281,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BNTU2ODkyY2MtMjU1NC00NjE1LWEzYjgtMWQ3MzRhMTE0NDc0XkEyXkFqcGdeQXVyMjM4MzQ4OTQ@._V1_QL75_UY562_CR1,0,380,562_.jpg",
   },
   {
+    id: "23",
     title: "City of God",
     year: 2002,
     rating: "R",
@@ -269,6 +293,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BMGU5OWEwZDItNmNkMC00NzZmLTk1YTctNzVhZTJjM2NlZTVmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
   },
   {
+    id: "24",
     title: "Once Upon a Time in the West",
     year: 1968,
     rating: "PG-13",
@@ -280,6 +305,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BODQ3NDExOGYtMzI3Mi00NWRlLTkwNjAtNjc4MDgzZGJiZTA1XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_QL75_UX380_CR0,3,380,562_.jpg",
   },
   {
+    id: "25",
     title: "The Departed",
     year: 2006,
     rating: "R",
@@ -291,6 +317,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BMTI1MTY2OTIxNV5BMl5BanBnXkFtZTYwNjQ4NjY3._V1_QL75_UY562_CR0,0,380,562_.jpg",
   },
   {
+    id: "26",
     title: "Rear Window",
     year: 1954,
     rating: "PG",
@@ -302,6 +329,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BNGUxYWM3M2MtMGM3Mi00ZmRiLWE0NGQtZjE5ODI2OTJhNTU0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_QL75_UY562_CR2,0,380,562_.jpg",
   },
   {
+    id: "27",
     title: "Gladiator",
     year: 2000,
     rating: "R",
@@ -313,6 +341,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_QL75_UX380_CR0,0,380,562_.jpg",
   },
   {
+    id: "28",
     title: "Terminator 2: Judgment Day",
     year: 1991,
     rating: "R",
@@ -325,6 +354,7 @@ export const movies: Movie[] = [
     isTrending: true,
   },
   {
+    id: "29",
     title: "Whiplash",
     year: 2014,
     rating: "R",
@@ -336,6 +366,7 @@ export const movies: Movie[] = [
       "https://m.media-amazon.com/images/M/MV5BOTA5NDZlZGUtMjAxOS00YTRkLTkwYmMtYWQ0NWEwZDZiNjEzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_QL75_UX380_CR0,0,380,562_.jpg",
   },
   {
+    id: "30",
     title: "Psycho",
     year: 1960,
     rating: "R",
