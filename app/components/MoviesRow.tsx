@@ -86,7 +86,8 @@ export default function MoviesRow({ title, filteredMovies }: MoviesRowProps) {
         >
           {filteredMovies.map((movie) => (
             <MovieCard
-              key={movie.title}
+              key={movie.id}
+              id={movie.id}
               imageSrc={movie.thumbnail}
               title={movie.title}
               description={movie.synopsis}

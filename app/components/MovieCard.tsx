@@ -1,5 +1,7 @@
 "use client";
 
+import { movies } from "@/data/movies";
+import { Link } from "@chakra-ui/next-js";
 import { Box, Circle, Flex, Image, Text, Tooltip } from "@chakra-ui/react";
 import { BsHandThumbsUp } from "react-icons/bs";
 import { IoIosPlay } from "react-icons/io";
@@ -7,6 +9,7 @@ import { LuCheck, LuChevronDown, LuPlus } from "react-icons/lu";
 import { useList } from "../context/MyListContext";
 
 interface MovieProps {
+  id: string;
   title: string;
   imageSrc: string;
   description: string;
@@ -17,6 +20,7 @@ interface MovieProps {
 }
 
 export default function MovieCard({
+  id,
   title,
   imageSrc,
   genre,
@@ -115,6 +119,7 @@ export default function MovieCard({
             >
               <IoIosPlay fontSize={"1.5rem"} />
             </Circle>
+
             <Tooltip
               hasArrow
               label="Add to My List"
@@ -159,23 +164,25 @@ export default function MovieCard({
               </Circle>
             </Tooltip>
           </Flex>
-          <Tooltip
-            hasArrow
-            label="More Info"
-            placement="top"
-            bg={"white"}
-            color={"black"}
-            p={2}
-          >
-            <Circle
-              size={"40px"}
-              border={" 1px solid white"}
-              color={"white"}
-              _hover={{ cursor: "pointer" }}
+          <Link href={`/movie/${id}`}>
+            <Tooltip
+              hasArrow
+              label="More Info"
+              placement="top"
+              bg={"white"}
+              color={"black"}
+              p={2}
             >
-              <LuChevronDown fontSize={"1.5rem"} />
-            </Circle>
-          </Tooltip>
+              <Circle
+                size={"40px"}
+                border={" 1px solid white"}
+                color={"white"}
+                _hover={{ cursor: "pointer" }}
+              >
+                <LuChevronDown fontSize={"1.5rem"} />
+              </Circle>
+            </Tooltip>
+          </Link>
         </Flex>
         <Text
           border={"1px solid white"}

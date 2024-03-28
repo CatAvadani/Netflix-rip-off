@@ -25,7 +25,8 @@ export default function SearchMovies() {
       >
         {searchedMovies.map((movie) => (
           <MovieCard
-            key={movie.title}
+            key={movie.id}
+            id={movie.id}
             title={movie.title}
             imageSrc={movie.thumbnail}
             genre={movie.genre}
