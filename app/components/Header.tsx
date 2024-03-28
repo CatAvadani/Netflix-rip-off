@@ -8,6 +8,7 @@ import {
   Icon,
   IconButton,
   Image,
+  Link,
   Stack,
   Text,
   useDisclosure,
@@ -76,7 +77,9 @@ export default function Header() {
           justify={{ base: "center", md: "start" }}
           alignItems={"center"}
         >
-          <Image src='/logo1.svg' alt='logo' width='180px' />
+          <Link href='/'>
+            <Image src='/logo1.svg' alt='logo' width='180px' />
+          </Link>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
