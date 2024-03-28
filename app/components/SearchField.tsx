@@ -36,13 +36,17 @@ export default function SearchField() {
         gap={2}
       >
         <Input
+          pos={{ base: "absolute", md: "relative" }}
+          top={{ base: "100%" }}
+          right={{ base: "1%", md: "0" }}
+          width={{ base: "250px", md: "300px" }}
+          mt={{ base: "2rem", md: "0" }}
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           display={show ? "block" : "none"}
           placeholder='Action, Drama, Thriller...'
           bg='rgba(0,0,0,0.5)'
           color='white'
-          width={"300px"}
           _placeholder={{ color: "rgba(255,255,255,0.6)" }}
           _focus={{
             bg: "rgba(0,0,0,0.5)",
@@ -53,7 +57,6 @@ export default function SearchField() {
         <IconButton
           type='submit'
           aria-label='search-button'
-          display={{ base: "none", md: "inline-block" }}
           color={"white"}
           _hover={{
             bg: "transparent",

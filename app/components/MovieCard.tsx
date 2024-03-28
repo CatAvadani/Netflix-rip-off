@@ -61,13 +61,21 @@ export default function MovieCard({
           borderRadius={"5px"}
           objectFit='cover'
         />
+        <Box
+          pos='absolute'
+          top='0'
+          left='0'
+          h='100%'
+          w='100%'
+          bg='rgba(0, 0, 0, 0.3)'
+          borderRadius='5px'
+        ></Box>
 
         <Text
           pos={"absolute"}
           bottom={"20%"}
           left={"5px"}
           color={"white"}
-          bg={"rgba(0,0,0,0.4)"}
           fontSize={"1.2rem"}
           fontWeight={"bold"}
           p={2}
