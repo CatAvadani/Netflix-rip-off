@@ -42,7 +42,7 @@ export default function MoviesRow({ title, filteredMovies }: MoviesRowProps) {
       pl={8}
       onMouseEnter={() => setShowChevrons(true)}
       onMouseLeave={() => setShowChevrons(false)}
-      role="group"
+      role='group'
     >
       <Text
         maxW={"10rem"}
@@ -87,11 +87,7 @@ export default function MoviesRow({ title, filteredMovies }: MoviesRowProps) {
           {filteredMovies.map((movie) => (
             <MovieCard
               key={movie.id}
-              id={movie.id}
-              imageSrc={movie.thumbnail}
-              title={movie.title}
-              description={movie.synopsis}
-              genre={movie.genre}
+              movie={movie}
               isInMyList={myList?.some((m) => m === movie.id)}
               onToggle={() => toggleMyList(movie.id)}
             />

@@ -1,33 +1,38 @@
 "use client";
 
-import { movies } from "@/data/movies";
+import { Movie } from "@/data/movies";
 import { Link } from "@chakra-ui/next-js";
 import { Box, Circle, Flex, Image, Text, Tooltip } from "@chakra-ui/react";
 import { BsHandThumbsUp } from "react-icons/bs";
 import { IoIosPlay } from "react-icons/io";
 import { LuCheck, LuChevronDown, LuPlus } from "react-icons/lu";
-import { useList } from "../context/MyListContext";
 
 interface MovieProps {
-  id: string;
-  title: string;
-  imageSrc: string;
-  description: string;
-  genre: string;
+  movie: Movie;
   isExpanded?: boolean;
   isInMyList?: boolean;
   onToggle: () => void;
 }
 
 export default function MovieCard({
-  id,
-  title,
-  imageSrc,
-  genre,
+  movie,
   isExpanded = false,
   isInMyList = false,
   onToggle,
 }: MovieProps) {
+  function showAgeRestriction() {
+    switch (movie?.rating) {
+      case "PG":
+        return "8+";
+      case "PG-13":
+        return "13+";
+      case "R":
+        return "16+";
+      default:
+        return "ALL";
+    }
+  }
+
   return (
     <Box
       pos={"relative"}
@@ -35,7 +40,7 @@ export default function MovieCard({
       h={isExpanded ? "310px" : "200px"}
       overflow={"hidden"}
       borderRadius={"5px"}
-      transition="all 0.3s ease"
+      transition='all 0.3s ease'
       _hover={{
         h: "310px",
         w: ' base: "250px", md: " 320px"',
@@ -60,24 +65,24 @@ export default function MovieCard({
         },
       }}
     >
-      <Box pos={"relative"} h={"250px"} className="movieImage">
+      <Box pos={"relative"} h={"250px"} className='movieImage'>
         <Image
-          className="image"
-          src={imageSrc}
+          className='image'
+          src={movie?.thumbnail}
           h={"100%"}
           w={"100%"}
-          alt={`image-${title}`}
+          alt={`image-${movie?.title}`}
           borderRadius={"5px"}
-          objectFit="cover"
+          objectFit='cover'
         />
         <Box
-          pos="absolute"
-          top="0"
-          left="0"
-          h="100%"
-          w="100%"
-          bg="rgba(0, 0, 0, 0.3)"
-          borderRadius="5px"
+          pos='absolute'
+          top='0'
+          left='0'
+          h='100%'
+          w='100%'
+          bg='rgba(0, 0, 0, 0.3)'
+          borderRadius='5px'
         ></Box>
 
         <Text
@@ -89,14 +94,14 @@ export default function MovieCard({
           fontWeight={"bold"}
           p={2}
         >
-          {title}
+          {movie?.title}
         </Text>
       </Box>
 
       <Image
         pos={"absolute"}
-        src="/n-letter.svg"
-        alt="n-letter"
+        src='/n-letter.svg'
+        alt='n-letter'
         width={50}
         zIndex={2}
         top={"5%"}
@@ -105,7 +110,7 @@ export default function MovieCard({
       <Flex
         flexDir={"column"}
         bg={"#212121"}
-        className="cardBottom"
+        className='cardBottom'
         display={"none"}
         p={2}
       >
@@ -122,8 +127,8 @@ export default function MovieCard({
 
             <Tooltip
               hasArrow
-              label="Add to My List"
-              placement="top"
+              label={isInMyList ? "Remove from My List" : "Add to My List"}
+              placement='top'
               bg={"white"}
               color={"black"}
               p={2}
@@ -138,18 +143,18 @@ export default function MovieCard({
                 {" "}
                 {isInMyList ? (
                   <LuCheck
-                    className="h-6 w-6 text-red-700"
+                    className='h-6 w-6 text-red-700'
                     onClick={onToggle}
                   />
                 ) : (
-                  <LuPlus className="h-6 w-6" onClick={onToggle} />
+                  <LuPlus className='h-6 w-6' onClick={onToggle} />
                 )}
               </Circle>
             </Tooltip>
             <Tooltip
               hasArrow
-              label="I Like This"
-              placement="top"
+              label='I Like This'
+              placement='top'
               bg={"white"}
               color={"black"}
               p={2}
@@ -164,11 +169,11 @@ export default function MovieCard({
               </Circle>
             </Tooltip>
           </Flex>
-          <Link href={`/movie/${id}`}>
+          <Link href={`/movie/${movie?.id}`}>
             <Tooltip
               hasArrow
-              label="More Info"
-              placement="top"
+              label='More Info'
+              placement='top'
               bg={"white"}
               color={"black"}
               p={2}
@@ -184,17 +189,22 @@ export default function MovieCard({
             </Tooltip>
           </Link>
         </Flex>
-        <Text
-          border={"1px solid white"}
-          color={"white"}
-          maxW={"3rem"}
-          textAlign={"center"}
-          mt={4}
-        >
-          16+
-        </Text>
+        <Flex justifyContent={"left"} alignItems={"center"} gap={4}>
+          <Text color={"white"} maxW={"3rem"} textAlign={"center"} mt={4}>
+            {movie?.year}
+          </Text>
+          <Text
+            border={"1px solid white"}
+            color={"white"}
+            p={"0 0.4rem"}
+            textAlign={"center"}
+            mt={4}
+          >
+            {showAgeRestriction()}
+          </Text>
+        </Flex>
         <Text mt={4} color={"white"}>
-          {genre}
+          {movie?.genre}
         </Text>
       </Flex>
     </Box>
