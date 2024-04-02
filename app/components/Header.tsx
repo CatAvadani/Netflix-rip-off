@@ -63,7 +63,7 @@ export default function Header() {
         >
           <IconButton
             onClick={onToggle}
-            color='red'
+            color="red"
             _hover={{ bg: "transparent" }}
             icon={
               isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
@@ -77,8 +77,8 @@ export default function Header() {
           justify={{ base: "center", md: "start" }}
           alignItems={"center"}
         >
-          <Link href='/'>
-            <Image src='/logo1.svg' alt='logo' width='180px' />
+          <Link href="/">
+            <Image src="/logo1.svg" alt="logo" width="180px" />
           </Link>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
@@ -160,10 +160,10 @@ const MobileNavItem = ({ label, href }: NavItem) => {
       <Box
         bg={"black"}
         py={2}
-        as='a'
+        as="a"
         href={href ?? "#"}
-        justifyContent='space-between'
-        alignItems='center'
+        justifyContent="space-between"
+        alignItems="center"
         _hover={{
           textDecoration: "none",
         }}
@@ -197,7 +197,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "My List",
-    href: "#",
+    href: "myList",
   },
   {
     label: "Watch Again",
