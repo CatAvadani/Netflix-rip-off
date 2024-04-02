@@ -8,7 +8,7 @@ import { IoIosPlay } from "react-icons/io";
 import { LuCheck, LuChevronDown, LuPlus } from "react-icons/lu";
 
 interface MovieProps {
-  movie: Movie;
+  movie?: Movie;
   isExpanded?: boolean;
   isInMyList?: boolean;
   onToggle: () => void;
