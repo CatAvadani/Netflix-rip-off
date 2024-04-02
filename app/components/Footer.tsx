@@ -1,14 +1,19 @@
 "use client";
 
 import {
-    Box,
-    Container,
-    SimpleGrid,
-    Stack,
-    Text,
-    useColorModeValue,
+  Box,
+  Container,
+  SimpleGrid,
+  Stack,
+  Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
-import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa6";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa6";
 
 export default function LargeWithAppLinksAndSocial() {
   return (

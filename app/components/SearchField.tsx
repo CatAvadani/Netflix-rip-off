@@ -28,11 +28,11 @@ export default function SearchField() {
   return (
     <Flex justifyContent={"center"} alignItems={"center"} gap={2}>
       <FormControl
-        as='form'
+        as="form"
         onSubmit={handleSubmit}
-        display='flex'
-        alignItems='center'
-        justifyContent='center'
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
         gap={2}
       >
         <Input
@@ -44,19 +44,19 @@ export default function SearchField() {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           display={show ? "block" : "none"}
-          placeholder='Action, Drama, Thriller...'
-          bg='rgba(0,0,0,0.5)'
-          color='white'
+          placeholder="Action, Drama, Thriller..."
+          bg="rgba(0,0,0,0.5)"
+          color="white"
           _placeholder={{ color: "rgba(255,255,255,0.6)" }}
           _focus={{
             bg: "rgba(0,0,0,0.5)",
             outline: "none",
           }}
-          borderRadius='5px'
+          borderRadius="5px"
         />
         <IconButton
-          type='submit'
-          aria-label='search-button'
+          type="submit"
+          aria-label="search-button"
           color={"white"}
           _hover={{
             bg: "transparent",

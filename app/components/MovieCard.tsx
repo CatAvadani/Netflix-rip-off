@@ -40,7 +40,7 @@ export default function MovieCard({
       h={isExpanded ? "310px" : "200px"}
       overflow={"hidden"}
       borderRadius={"5px"}
-      transition='all 0.3s ease'
+      transition="all 0.3s ease"
       _hover={{
         h: "310px",
         w: ' base: "250px", md: " 320px"',
@@ -65,24 +65,24 @@ export default function MovieCard({
         },
       }}
     >
-      <Box pos={"relative"} h={"250px"} className='movieImage'>
+      <Box pos={"relative"} h={"250px"} className="movieImage">
         <Image
-          className='image'
+          className="image"
           src={movie?.thumbnail}
           h={"100%"}
           w={"100%"}
           alt={`image-${movie?.title}`}
           borderRadius={"5px"}
-          objectFit='cover'
+          objectFit="cover"
         />
         <Box
-          pos='absolute'
-          top='0'
-          left='0'
-          h='100%'
-          w='100%'
-          bg='rgba(0, 0, 0, 0.3)'
-          borderRadius='5px'
+          pos="absolute"
+          top="0"
+          left="0"
+          h="100%"
+          w="100%"
+          bg="rgba(0, 0, 0, 0.3)"
+          borderRadius="5px"
         ></Box>
 
         <Text
@@ -100,8 +100,8 @@ export default function MovieCard({
 
       <Image
         pos={"absolute"}
-        src='/n-letter.svg'
-        alt='n-letter'
+        src="/n-letter.svg"
+        alt="n-letter"
         width={50}
         zIndex={2}
         top={"5%"}
@@ -110,7 +110,7 @@ export default function MovieCard({
       <Flex
         flexDir={"column"}
         bg={"#212121"}
-        className='cardBottom'
+        className="cardBottom"
         display={"none"}
         p={2}
       >
@@ -128,7 +128,7 @@ export default function MovieCard({
             <Tooltip
               hasArrow
               label={isInMyList ? "Remove from My List" : "Add to My List"}
-              placement='top'
+              placement="top"
               bg={"white"}
               color={"black"}
               p={2}
@@ -143,18 +143,18 @@ export default function MovieCard({
                 {" "}
                 {isInMyList ? (
                   <LuCheck
-                    className='h-6 w-6 text-red-700'
+                    className="h-6 w-6 text-red-700"
                     onClick={onToggle}
                   />
                 ) : (
-                  <LuPlus className='h-6 w-6' onClick={onToggle} />
+                  <LuPlus className="h-6 w-6" onClick={onToggle} />
                 )}
               </Circle>
             </Tooltip>
             <Tooltip
               hasArrow
-              label='I Like This'
-              placement='top'
+              label="I Like This"
+              placement="top"
               bg={"white"}
               color={"black"}
               p={2}
@@ -172,8 +172,8 @@ export default function MovieCard({
           <Link href={`/movie/${movie?.id}`}>
             <Tooltip
               hasArrow
-              label='More Info'
-              placement='top'
+              label="More Info"
+              placement="top"
               bg={"white"}
               color={"black"}
               p={2}

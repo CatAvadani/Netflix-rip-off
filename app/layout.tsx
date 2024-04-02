@@ -16,11 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body style={{ background: "#141414" }}>
         <Providers>
           <Header />
-          <Box minH='100vh' as='main'>
+          <Box minH="100vh" as="main">
             {children}
           </Box>
           <Footer />

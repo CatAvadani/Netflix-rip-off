@@ -1,61 +1,63 @@
-'use client'
+"use client";
 
 import { movies } from "@/data/movies";
 import {
-    Box,
-    Button,
-    Circle,
-    Container,
-    Flex,
-    Heading,
-    Image,
-    List,
-    ListItem,
-    SimpleGrid,
-    Stack,
-    StackDivider,
-    Text,
-    Tooltip,
-    VStack,
-    useColorModeValue
-} from '@chakra-ui/react';
+  Box,
+  Button,
+  Circle,
+  Container,
+  Flex,
+  Heading,
+  Image,
+  List,
+  ListItem,
+  SimpleGrid,
+  Stack,
+  StackDivider,
+  Text,
+  Tooltip,
+  VStack,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { BsHandThumbsUp } from "react-icons/bs";
 import { IoIosPlay } from "react-icons/io";
 import { LuPlus } from "react-icons/lu";
-import { MdLocalShipping } from 'react-icons/md';
+import { MdLocalShipping } from "react-icons/md";
 
 type PageProps = { params: { id: string } };
 
 export default function MovieDetail({ params }: PageProps) {
-    const movie = movies.find((m) => m.id ===params.id);
-    // return (
-    //     <Text mt={"10rem"} color={"white"}>{movie?.title}</Text>
+  const movie = movies.find((m) => m.id === params.id);
+  // return (
+  //     <Text mt={"10rem"} color={"white"}>{movie?.title}</Text>
 
-    // )
+  // )
   return (
-    <Container maxW={'7xl'} color={"white"}>
+    <Container maxW={"7xl"} color={"white"}>
       <SimpleGrid
         columns={{ base: 1, lg: 2 }}
         spacing={{ base: 8, md: 10 }}
-        py={{ base: 18, md: 24 }}>
+        py={{ base: 18, md: 24 }}
+      >
         <Flex>
           <Image
-            rounded={'md'}
-            alt={'product image'}
+            rounded={"md"}
+            alt={"product image"}
             src={movie?.thumbnail}
-            fit={'cover'}
-            align={'center'}
-            w={'100%'}
-            h={{ base: '100%', sm: '400px', lg: '500px' }}
+            fit={"cover"}
+            align={"center"}
+            w={"100%"}
+            h={{ base: "100%", sm: "400px", lg: "500px" }}
           />
         </Flex>
         <Stack spacing={{ base: 6, md: 10 }}>
-          <Box as={'header'}>
+          <Box as={"header"}>
             <Heading
               lineHeight={1.1}
               fontWeight={600}
-              fontSize={{ base: '2xl', sm: '4xl', lg: '5xl' }}>
-             {movie?.title}
+              fontSize={{ base: "2xl", sm: "4xl", lg: "5xl" }}
+            >
+              {movie?.title}
             </Heading>
             {/* <Text
               color={useColorModeValue('gray.900', 'gray.400')}
@@ -67,15 +69,19 @@ export default function MovieDetail({ params }: PageProps) {
 
           <Stack
             spacing={{ base: 4, sm: 6 }}
-            direction={'column'}
+            direction={"column"}
             divider={
-              <StackDivider borderColor={useColorModeValue('gray.200', 'gray.600')} />
-            }>
+              <StackDivider
+                borderColor={useColorModeValue("gray.200", "gray.600")}
+              />
+            }
+          >
             <VStack spacing={{ base: 4, sm: 6 }}>
               <Text
-                color={useColorModeValue('gray.500', 'gray.400')}
-                fontSize={'2xl'}
-                fontWeight={'300'}>
+                color={useColorModeValue("gray.500", "gray.400")}
+                fontSize={"2xl"}
+                fontWeight={"300"}
+              >
                 {movie?.synopsis}
               </Text>
             </VStack>
@@ -104,88 +110,89 @@ export default function MovieDetail({ params }: PageProps) {
             </Box> */}
             <Box>
               <Text
-                fontSize={{ base: '16px', lg: '18px' }}
-                color={useColorModeValue('yellow.500', 'yellow.300')}
-                fontWeight={'500'}
-                textTransform={'uppercase'}
-                mb={'4'}>
+                fontSize={{ base: "16px", lg: "18px" }}
+                color={useColorModeValue("yellow.500", "yellow.300")}
+                fontWeight={"500"}
+                textTransform={"uppercase"}
+                mb={"4"}
+              >
                 Movie Details
               </Text>
 
               <List spacing={3}>
                 <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
+                  <Text as={"span"} fontWeight={"bold"}>
                     Year:
-                  </Text>{' '}
+                  </Text>{" "}
                   {movie?.year}
                 </ListItem>
                 <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
+                  <Text as={"span"} fontWeight={"bold"}>
                     Rating:
-                  </Text>{' '}
+                  </Text>{" "}
                   {movie?.year}
                 </ListItem>
                 <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
+                  <Text as={"span"} fontWeight={"bold"}>
                     Actors:
-                  </Text>{' '}
+                  </Text>{" "}
                   {movie?.actors}
                 </ListItem>
                 <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
+                  <Text as={"span"} fontWeight={"bold"}>
                     Genre:
-                  </Text>{' '}
+                  </Text>{" "}
                   {movie?.genre}
                 </ListItem>
               </List>
             </Box>
           </Stack>
           <Flex mt={5} alignItems={"center"} justifyContent={"space-between"}>
-          <Flex gap={3}>
-            <Circle
-              size={"40px"}
-              bg={"white"}
-              color={"black"}
-              _hover={{ cursor: "pointer" }}
-            >
-              <IoIosPlay fontSize={"1.5rem"} />
-            </Circle>
+            <Flex gap={3}>
+              <Circle
+                size={"40px"}
+                bg={"white"}
+                color={"black"}
+                _hover={{ cursor: "pointer" }}
+              >
+                <IoIosPlay fontSize={"1.5rem"} />
+              </Circle>
 
-            <Tooltip
-              hasArrow
-              label="Add to My List"
-              placement="top"
-              bg={"white"}
-              color={"black"}
-              p={2}
-            >
-              <Circle
-                size={"40px"}
-                border={" 1px solid white"}
-                color={"white"}
-                _hover={{ cursor: "pointer" }}
+              <Tooltip
+                hasArrow
+                label="Add to My List"
+                placement="top"
+                bg={"white"}
+                color={"black"}
+                p={2}
               >
-                <LuPlus fontSize={"1.5rem"} />
-              </Circle>
-            </Tooltip>
-            <Tooltip
-              hasArrow
-              label="I Like This"
-              placement="top"
-              bg={"white"}
-              color={"black"}
-              p={2}
-            >
-              <Circle
-                size={"40px"}
-                border={" 1px solid white"}
-                color={"white"}
-                _hover={{ cursor: "pointer" }}
+                <Circle
+                  size={"40px"}
+                  border={" 1px solid white"}
+                  color={"white"}
+                  _hover={{ cursor: "pointer" }}
+                >
+                  <LuPlus fontSize={"1.5rem"} />
+                </Circle>
+              </Tooltip>
+              <Tooltip
+                hasArrow
+                label="I Like This"
+                placement="top"
+                bg={"white"}
+                color={"black"}
+                p={2}
               >
-                <BsHandThumbsUp fontSize={"1.5rem"} />
-              </Circle>
-            </Tooltip>
-          </Flex>
+                <Circle
+                  size={"40px"}
+                  border={" 1px solid white"}
+                  color={"white"}
+                  _hover={{ cursor: "pointer" }}
+                >
+                  <BsHandThumbsUp fontSize={"1.5rem"} />
+                </Circle>
+              </Tooltip>
+            </Flex>
           </Flex>
 
           {/* <Button
@@ -211,5 +218,5 @@ export default function MovieDetail({ params }: PageProps) {
         </Stack>
       </SimpleGrid>
     </Container>
-  )
+  );
 }

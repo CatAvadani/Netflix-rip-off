@@ -127,7 +127,7 @@ const DesktopNav = () => {
   return (
     <Stack direction={"row"} spacing={6}>
       {NAV_ITEMS.map((navItem) => (
-        <Link href={navItem.href}>
+        <Link key={navItem.label} href={navItem.href}>
           <Box key={navItem.label}>
             <Text
               color={"white"}
