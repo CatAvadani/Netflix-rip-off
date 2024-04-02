@@ -127,16 +127,18 @@ const DesktopNav = () => {
   return (
     <Stack direction={"row"} spacing={6}>
       {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label}>
-          <Text
-            color={"white"}
-            fontWeight={400}
-            _hover={{ color: "#b7b3b3", cursor: "pointer" }}
-            transition={"all 0.3s ease"}
-          >
-            {navItem.label}
-          </Text>
-        </Box>
+        <Link href={navItem.href}>
+          <Box key={navItem.label}>
+            <Text
+              color={"white"}
+              fontWeight={400}
+              _hover={{ color: "#b7b3b3", cursor: "pointer" }}
+              transition={"all 0.3s ease"}
+            >
+              {navItem.label}
+            </Text>
+          </Box>
+        </Link>
       ))}
     </Stack>
   );
@@ -197,7 +199,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "My List",
-    href: "myList",
+    href: "/myList",
   },
   {
     label: "Watch Again",
