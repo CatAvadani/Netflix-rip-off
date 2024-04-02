@@ -42,7 +42,7 @@ export default function MoviesRow({ title, filteredMovies }: MoviesRowProps) {
       pl={8}
       onMouseEnter={() => setShowChevrons(true)}
       onMouseLeave={() => setShowChevrons(false)}
-      role='group'
+      role="group"
     >
       <Text
         maxW={"10rem"}

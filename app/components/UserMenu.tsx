@@ -21,25 +21,25 @@ export default function UserMenu() {
         _hover={{ cursor: "pointer", transform: "scale(1.1)" }}
         transition={"all 0.3s ease"}
       >
-        <Image borderRadius='5px' src='https://rb.gy/g1pwyx' alt='user-img' />
+        <Image borderRadius="5px" src="https://rb.gy/g1pwyx" alt="user-img" />
       </MenuButton>
       <Portal>
         <MenuList bg={"#363434"} color={"white"} border={"none"} zIndex={10}>
           <MenuItem bg={"#363434"}>
-            <Box mr='1rem'>
+            <Box mr="1rem">
               <FaRegUser />
             </Box>{" "}
             Account
           </MenuItem>
           <MenuDivider />
           <MenuItem bg={"#363434"}>
-            <Box mr='1rem'>
+            <Box mr="1rem">
               <TiPencil />
             </Box>{" "}
             Manage Profiles
           </MenuItem>
           <MenuItem bg={"#363434"}>
-            <Box mr='1rem'>
+            <Box mr="1rem">
               <IoMdHelpCircleOutline />
             </Box>{" "}
             Help Center

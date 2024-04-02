@@ -16,10 +16,10 @@ export default function SearchMovies() {
   return (
     <Box color={"white"} mt={"10rem"}>
       <SimpleGrid
-        width='80%'
-        m='2rem auto'
+        width="80%"
+        m="2rem auto"
         alignContent={"center"}
-        mt='5rem'
+        mt="5rem"
         columns={{ base: 1, md: 2, lg: 3 }}
         gap={10}
       >
