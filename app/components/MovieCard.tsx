@@ -66,6 +66,7 @@ export default function MovieCard({
       }}
     >
       <Box pos={"relative"} h={"250px"} className="movieImage">
+        <Link href={`/movie/${movie?.id}`}>
         <Image
           className="image"
           src={movie?.thumbnail}
@@ -85,6 +86,7 @@ export default function MovieCard({
           borderRadius="5px"
         ></Box>
 
+
         <Text
           pos={"absolute"}
           bottom={"20%"}
@@ -96,6 +98,7 @@ export default function MovieCard({
         >
           {movie?.title}
         </Text>
+        </Link>
       </Box>
 
       <Image
