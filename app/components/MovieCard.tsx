@@ -6,6 +6,7 @@ import { Box, Circle, Flex, Image, Text, Tooltip } from "@chakra-ui/react";
 import { BsHandThumbsUp } from "react-icons/bs";
 import { IoIosPlay } from "react-icons/io";
 import { LuCheck, LuChevronDown, LuPlus } from "react-icons/lu";
+import showAgeRestriction from "./ShowAgeRestriction";
 
 interface MovieProps {
   movie?: Movie;
@@ -20,18 +21,7 @@ export default function MovieCard({
   isInMyList = false,
   onToggle,
 }: MovieProps) {
-  function showAgeRestriction() {
-    switch (movie?.rating) {
-      case "PG":
-        return "8+";
-      case "PG-13":
-        return "13+";
-      case "R":
-        return "16+";
-      default:
-        return "ALL";
-    }
-  }
+
 
   return (
     <Box
@@ -202,7 +192,7 @@ export default function MovieCard({
             textAlign={"center"}
             mt={4}
           >
-            {showAgeRestriction()}
+            {movie && showAgeRestriction(movie)}
           </Text>
         </Flex>
         <Text mt={4} color={"white"}>

@@ -22,6 +22,7 @@ export default function MyListPage() {
             key={movieId}
             movie={movies.find((movie) => movieId === movie.id)}
             isInMyList={true}
+            isExpanded={true}
             onToggle={() => toggleMyList(movieId)}
           />
         ))}

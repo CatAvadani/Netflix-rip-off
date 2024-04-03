@@ -1,5 +1,6 @@
 "use client";
 
+import showAgeRestriction from "@/app/components/ShowAgeRestriction";
 import { useList } from "@/app/context/MyListContext";
 import { movies } from "@/data/movies";
 import {
@@ -101,7 +102,7 @@ export default function MovieDetail({ params }: PageProps) {
                   <Text as={"span"} fontWeight={"bold"}>
                     Rating:
                   </Text>{" "}
-                  {movie?.rating}
+                  {movie && showAgeRestriction(movie)}
                 </ListItem>
                 <ListItem>
                   <Text as={"span"} fontWeight={"bold"}>
