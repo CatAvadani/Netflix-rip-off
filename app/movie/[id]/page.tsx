@@ -16,7 +16,7 @@ import {
   Text,
   Tooltip,
   VStack,
-  useColorModeValue
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { BsHandThumbsUp } from "react-icons/bs";
 import { IoIosPlay } from "react-icons/io";
