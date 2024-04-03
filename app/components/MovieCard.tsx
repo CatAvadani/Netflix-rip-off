@@ -21,8 +21,6 @@ export default function MovieCard({
   isInMyList = false,
   onToggle,
 }: MovieProps) {
-
-
   return (
     <Box
       pos={"relative"}
