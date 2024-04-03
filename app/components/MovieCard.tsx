@@ -67,37 +67,36 @@ export default function MovieCard({
     >
       <Box pos={"relative"} h={"250px"} className="movieImage">
         <Link href={`/movie/${movie?.id}`}>
-        <Image
-          className="image"
-          src={movie?.thumbnail}
-          h={"100%"}
-          w={"100%"}
-          alt={`image-${movie?.title}`}
-          borderRadius={"5px"}
-          objectFit="cover"
-        />
-        <Box
-          pos="absolute"
-          top="0"
-          left="0"
-          h="100%"
-          w="100%"
-          bg="rgba(0, 0, 0, 0.3)"
-          borderRadius="5px"
-        ></Box>
+          <Image
+            className="image"
+            src={movie?.thumbnail}
+            h={"100%"}
+            w={"100%"}
+            alt={`image-${movie?.title}`}
+            borderRadius={"5px"}
+            objectFit="cover"
+          />
+          <Box
+            pos="absolute"
+            top="0"
+            left="0"
+            h="100%"
+            w="100%"
+            bg="rgba(0, 0, 0, 0.3)"
+            borderRadius="5px"
+          ></Box>
 
-
-        <Text
-          pos={"absolute"}
-          bottom={"20%"}
-          left={"5px"}
-          color={"white"}
-          fontSize={"1.2rem"}
-          fontWeight={"bold"}
-          p={2}
-        >
-          {movie?.title}
-        </Text>
+          <Text
+            pos={"absolute"}
+            bottom={"20%"}
+            left={"5px"}
+            color={"white"}
+            fontSize={"1.2rem"}
+            fontWeight={"bold"}
+            p={2}
+          >
+            {movie?.title}
+          </Text>
         </Link>
       </Box>
 
