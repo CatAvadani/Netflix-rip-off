@@ -1,5 +1,6 @@
 "use client";
 
+import { useList } from "@/app/context/MyListContext";
 import { movies } from "@/data/movies";
 import {
   Box,
@@ -20,11 +21,15 @@ import {
 } from "@chakra-ui/react";
 import { BsHandThumbsUp } from "react-icons/bs";
 import { IoIosPlay } from "react-icons/io";
-import { LuPlus } from "react-icons/lu";
+import { LuCheck, LuPlus } from "react-icons/lu";
 
 type PageProps = { params: { id: string } };
 
 export default function MovieDetail({ params }: PageProps) {
+  const { myList, toggleMyList } = useList();
+  const isInMyList = myList.includes(params.id);
+  const handleToggle = () => toggleMyList(params.id);
+
   const movie = movies.find((m) => m.id === params.id);
   return (
     <Container maxW={"7xl"} color={"white"}>
@@ -126,7 +131,7 @@ export default function MovieDetail({ params }: PageProps) {
 
               <Tooltip
                 hasArrow
-                label="Add to My List"
+                label={isInMyList ? "Remove from My List" : "Add to My List"}
                 placement="top"
                 bg={"white"}
                 color={"black"}
@@ -137,8 +142,17 @@ export default function MovieDetail({ params }: PageProps) {
                   border={" 1px solid white"}
                   color={"white"}
                   _hover={{ cursor: "pointer" }}
+                  onClick={handleToggle}
                 >
-                  <LuPlus fontSize={"1.5rem"} />
+                  {" "}
+                  {isInMyList ? (
+                    <LuCheck
+                      className="h-6 w-6 text-red-700"
+                      onClick={handleToggle}
+                    />
+                  ) : (
+                    <LuPlus className="h-6 w-6" onClick={handleToggle} />
+                  )}
                 </Circle>
               </Tooltip>
               <Tooltip
