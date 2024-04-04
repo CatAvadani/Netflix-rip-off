@@ -1,13 +1,12 @@
+## Netflix Rip Off
 
-## Netflix Rip Off 
+Live Demo:
 
-Live Demo: 
-      
        https://netflix-rip-off.vercel.app/
 
 ## Description
 
-The Netfilx Rip Off is an assignment project at Medieinstitutet, designed to replicate the core functionalities of a movie platform like Netflix. The project is intended to practice and showcase not only our technical skills but also to cultivate an agile development mindset. 
+The Netflix Rip Off is an assignment project at Medieinstitutet, designed to replicate the core functionalities of a movie platform like Netflix. The project is intended to practice and showcase not only our technical skills but also to cultivate an agile development mindset.
 
 As part of the assignment, we've integrated advanced development practices, including the use of GitHub Actions, ESLint, and defined workflows, to ensure the project adheres to professional standards of code quality and collaboration.
 
@@ -37,19 +36,18 @@ Catalina Avadani
 
 ## Setup Instructions
 
-1. Clone the repository:
+1.  Clone the repository:
 
            git clone https://github.com/CatAvadani/netflix-rip-off.git
-   
-2. Navigate to the project directory: 
 
-   cd movie-project
+2.  Navigate to the project directory:
 
-3. Install dependencies: 
+    cd movie-project
 
-   npm install
+3.  Install dependencies:
 
-4. Start the development server:
+    npm install
 
-   npm run dev
+4.  Start the development server:
 
+    npm run dev
