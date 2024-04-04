@@ -1,7 +1,14 @@
 "use client";
 import { movies } from "@/data/movies";
 import { InfoIcon } from "@chakra-ui/icons";
-import { Box, Flex, Heading, SimpleGrid, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  SimpleGrid,
+  Spinner,
+  Text,
+} from "@chakra-ui/react";
 import MovieCard from "../components/MovieCard";
 import { useList } from "../context/MyListContext";
 
@@ -12,7 +19,13 @@ export default function MyListPage() {
     return (
       <Flex justify="center" align="center" height="100vh">
         <Text color={"red"} fontSize={"1.5rem"}>
-          Loading...
+          <Spinner
+            thickness="4px"
+            speed="0.65s"
+            emptyColor="gray.200"
+            color="red.500"
+            size="xl"
+          />
         </Text>
       </Flex>
     );
