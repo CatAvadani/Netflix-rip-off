@@ -11,6 +11,7 @@ import {
 interface ListContextValue {
   myList: string[];
   toggleMyList: (movieId: string) => void;
+  isLoading: boolean;
 }
 
 const MyListContext = createContext({} as ListContextValue);
@@ -18,6 +19,7 @@ const MyListContext = createContext({} as ListContextValue);
 function MyListProvider(props: PropsWithChildren) {
   const [myList, setMyList] = useState<string[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const storedMyList = localStorage.getItem("myList");
@@ -25,6 +27,7 @@ function MyListProvider(props: PropsWithChildren) {
       setMyList(JSON.parse(storedMyList));
     }
     setIsLoaded(true);
+    setIsLoading(false);
   }, []);
 
   useEffect(() => {
@@ -46,6 +49,7 @@ function MyListProvider(props: PropsWithChildren) {
       value={{
         myList,
         toggleMyList,
+        isLoading,
       }}
     >
       {props.children}
