@@ -21,8 +21,7 @@ Catalina Avadani
 ## Features
 
 - **Trending Movies**: Discover the most popular movies that are currently trending.
-- **Recommended for You**: Get personalized movie recommendations based on your interests.
-- **Genre-based Browsing**: Search and browse movies by genres including Adventure, Thriller, Drama, Action, and more.
+- **Recommended**: Get personalized movie recommendations based on your interests.
 - **Movie Details**: View detailed information about each movie, such as genre, release year, and age restriction, by clicking on a movie card.
 - **Add to My List**: Create your own collection of favorite movies by adding them to 'My List' with a single click.
 - **Search Functionality**: Utilize the search bar to find movies by genres including Adventure, Thriller, Drama, Action, and more.
