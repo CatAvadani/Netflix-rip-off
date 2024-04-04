@@ -18,15 +18,7 @@ export default function MyListPage() {
   if (isLoading) {
     return (
       <Flex justify="center" align="center" height="100vh">
-        <Text color={"red"} fontSize={"1.5rem"}>
-          <Spinner
-            thickness="4px"
-            speed="0.65s"
-            emptyColor="gray.200"
-            color="red.500"
-            size="xl"
-          />
-        </Text>
+        <Spinner size={"xl"} color="red.500" />
       </Flex>
     );
   }
