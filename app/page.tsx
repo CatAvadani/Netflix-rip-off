@@ -25,6 +25,7 @@ export default function Home() {
       <Box mt="-1rem" pb="5rem">
         <MoviesRow title="Trending Now" filteredMovies={trendingMovies} />
         <MoviesRow title="Recommended" filteredMovies={recommendedByUs} />
+        <MoviesRow title="All Movies" filteredMovies={movies} />
         <MoviesRow title="Adventure" filteredMovies={adventureMovies} />
         <MoviesRow title="Thriller" filteredMovies={thrillerMovies} />
       </Box>
