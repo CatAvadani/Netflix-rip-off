@@ -11,11 +11,11 @@ As part of the assignment, we've integrated advanced development practices, incl
 
 ## Team Members
 
-Tomoyo Alvåg
+[Catalina](https://github.com/CatAvadani) 
 
-Eleni Solomon-Samuelsson
+[Eleni](https://github.com/Eleni001)
 
-Catalina Avadani
+[Tomoyo](https://github.com/toal13) 
 
 ## Features
 
@@ -36,16 +36,16 @@ Catalina Avadani
 
 1.  Clone the repository:
 
-           git clone https://github.com/CatAvadani/netflix-rip-off.git
+   `git clone https://github.com/CatAvadani/netflix-rip-off.git`
 
 2.  Navigate to the project directory:
 
-    cd movie-project
+   `cd movie-project`
 
 3.  Install dependencies:
 
-    npm install
+    `npm install`
 
 4.  Start the development server:
 
-    npm run dev
+    `npm run dev`
