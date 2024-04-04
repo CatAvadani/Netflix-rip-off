@@ -1,8 +1,7 @@
 ## Netflix Rip Off
 
 Live Demo:
-
-       https://netflix-rip-off.vercel.app/
+https://netflix-rip-off.vercel.app
 
 ## Description
 
