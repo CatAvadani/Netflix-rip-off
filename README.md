@@ -11,11 +11,11 @@ As part of the assignment, we've integrated advanced development practices, incl
 
 ## Team Members
 
-[Catalina](https://github.com/CatAvadani) 
+[Catalina](https://github.com/CatAvadani)
 
 [Eleni](https://github.com/Eleni001)
 
-[Tomoyo](https://github.com/toal13) 
+[Tomoyo](https://github.com/toal13)
 
 ## Features
 
@@ -36,11 +36,11 @@ As part of the assignment, we've integrated advanced development practices, incl
 
 1.  Clone the repository:
 
-   `git clone https://github.com/CatAvadani/netflix-rip-off.git`
+`git clone https://github.com/CatAvadani/netflix-rip-off.git`
 
 2.  Navigate to the project directory:
 
-   `cd movie-project`
+`cd movie-project`
 
 3.  Install dependencies:
 
